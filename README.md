@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img width="600" src="logo.png" />
+    <img width="600" src="assets/logo.png" />
 </h1>
 
 
@@ -12,7 +12,7 @@ Temporizador para windows feito em Clarion
 O projeto foi feito com clarion. 
 
 
-<img src="assets/logsv.PNG" alt="page-home">
+<img src="assets/temporizador.png" alt="page-home">
 
 
 🔧 Tecnologias utilizadas:
