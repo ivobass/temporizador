@@ -18,15 +18,15 @@
 !!! </summary>
 Main PROCEDURE 
 
-LOC:DisplayTimer     STRING(5)                             !
-LOC:MOSTRAR          LONG                                  !
-LOC:CONTADOR         LONG                                  !
-LOC:INICIO           REAL                                  !
-LOC:BANNER           STRING(200)                           !
-LOC:BANNER2          STRING(100)                           !
-LOC:HORAINICIAL      LONG                                  !
-LOC:HORAFINAL        LONG                                  !Hora Final
-LOC:CALCULAR         BYTE                                  !
+LOC:DisplayTimer     STRING(5)                             ! 
+LOC:MOSTRAR          LONG                                  ! 
+LOC:CONTADOR         LONG                                  ! 
+LOC:INICIO           REAL                                  ! 
+LOC:BANNER           STRING(200)                           ! 
+LOC:BANNER2          STRING(100)                           ! 
+LOC:HORAINICIAL      LONG                                  ! 
+LOC:HORAFINAL        LONG                                  ! Hora Final
+LOC:CALCULAR         BYTE                                  ! 
 QuickWindow          WINDOW('Temporizador'),AT(,,417,271),FONT('Microsoft Sans Serif',8,,FONT:regular),CENTER,COLOR(COLOR:White), |
   GRAY,IMM,MAX,HLP('Main'),SYSTEM,TIMER(1000)
                        PROMPT('Hora Inicial:'),AT(15,257),USE(?LOC:HORAINICIAL:Prompt),TRN
@@ -82,9 +82,9 @@ ReturnValue          BYTE,AUTO
   SELF.FirstField = ?LOC:HORAINICIAL:Prompt
   SELF.VCRRequest &= VCRRequest
   SELF.Errors &= GlobalErrors                              ! Set this windows ErrorManager to the global ErrorManager
+  SELF.AddItem(Toolbar)
   CLEAR(GlobalRequest)                                     ! Clear GlobalRequest after storing locally
   CLEAR(GlobalResponse)
-  SELF.AddItem(Toolbar)
   IF SELF.Request = SelectRecord
      SELF.AddItem(?Ok,RequestCancelled)                    ! Add the close control to the window manger
   ELSE
@@ -151,7 +151,7 @@ Looped BYTE
       !		ELSE
       			LOC:MOSTRAR = LOC:HORAINICIAL * TIME:Minute
       			LOC:DisplayTimer = SUB(FORMAT(LOC:MOSTRAR,@t4),4,5)
-      			QuickWindow{PROP:TIMER} = 100    ! ----- Timer a 1 Seg.
+      			QuickWindow{PROP:TIMER} = TIME:Second    ! ----- Timer a 1 Seg.
       			LOC:CALCULAR = TRUE
       !		END
       		SELECT(?LOC:HORAINICIAL)
@@ -220,7 +220,7 @@ Looped BYTE
       			LOC:MOSTRAR = LOC:HORAFINAL
       			LOC:DisplayTimer = SUB(FORMAT(LOC:MOSTRAR,@t4),4,5)
       			DISPLAY(?LOC:DisplayTimer)
-      			QuickWindow{PROP:TIMER} = 1000      ! ----- Aumentar TIMER a 10 Seg.
+      			QuickWindow{PROP:TIMER} = 10*TIME:Second      ! ----- Aumentar TIMER a 10 Seg.
       			LOC:CALCULAR = FALSE
       			MESSAGE('TERMINO O TEMPO')
       		END

@@ -1,6 +1,6 @@
 ﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{0AFF2861-7888-4F0F-AA24-8F8470BAAC12}</ProjectGuid>
+    <ProjectGuid>{936CFB7C-07D1-4C1F-85C9-EACF72F2E600}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
     <OutputType>Exe</OutputType>
@@ -24,7 +24,6 @@
     <check_index>False</check_index>
   </PropertyGroup>
   <ItemGroup>
-    <Library Include="Control.EXE.manifest" />
     <Compile Include="Control.clw">
       <Generated>true</Generated>
     </Compile>
@@ -37,6 +36,9 @@
     <Compile Include="Control_BC0.CLW">
       <Generated>true</Generated>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Control.EXE.manifest" />
   </ItemGroup>
   <Import Project="$(ClarionBinPath)\SoftVelocity.Build.Clarion.targets" />
 </Project>

@@ -49,7 +49,7 @@ Destruct               PROCEDURE
   FuzzyMatcher.SetOption(MatchOption:NoCase, 1)            ! Configure case matching
   FuzzyMatcher.SetOption(MatchOption:WordOnly, 0)          ! Configure 'word only' matching
   INIMgr.Init('.\Control.INI', NVD_INI)                    ! Configure INIManager to use INI file
-  DctInit
+  DctInit()
   Main
   INIMgr.Update
   INIMgr.Kill                                              ! Destroy INI manager

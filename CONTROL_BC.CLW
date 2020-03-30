@@ -4,19 +4,19 @@
 
   MAP
     MODULE('Control_BC0.CLW')
-Control_BC0:DctInit             PROCEDURE
-Control_BC0:DctKill             PROCEDURE
-Control_BC0:FilesInit           PROCEDURE
+Control_BC0:DctInit             PROCEDURE()
+Control_BC0:DctKill             PROCEDURE()
+Control_BC0:FilesInit           PROCEDURE()
     END
   END
 
-DctInit PROCEDURE
+DctInit PROCEDURE()
   CODE
   Control_BC0:DctInit
   Control_BC0:FilesInit
 
 
-DctKill PROCEDURE
+DctKill PROCEDURE()
   CODE
   Control_BC0:DctKill
 
