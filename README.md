@@ -5,11 +5,16 @@
 
 <p align="center">
 Temporizador para windows feito em Clarion
+    
+Timer for windows made in Clarion
 </p>
 
 📌 Temporizador 
 ------------------
-O projeto foi feito com clarion. 
+O projeto foi feito com clarion.
+
+
+The project was done with clarion.
 
 
 <img src="assets/temporizador.png" alt="page-home">
@@ -26,10 +31,10 @@ O projeto foi feito com clarion.
 
 
 
+Obrigado aos meus amigos Mark Sarson, Roberto Renz, <a href="https://github.com/MarkGoldberg"> Mark Goldberg </a>, Fred J. Pedraza,  José Ignacio Blasco (Tito), Ramon Pacheco e Pedro Priori por me ajudar a sempre esclarecer minhas dúvidas e manter o Clarion vivo
 
 
-
-Thanks to my friends Mark Sarson, Roberto Renz, <a href="https://github.com/MarkGoldberg">Mark Goldberg</a> , Fred J. Pedraza and (Tito) Jose Ignacio Blasco for helping me to always clarify my doubts at Clarion
+Thanks to my friends Mark Sarson, Roberto Renz, <a href="https://github.com/MarkGoldberg">Mark Goldberg</a> , Fred J. Pedraza, Jose Ignacio Blasco (Tito), Ramon Pacheco and Pedro Priori for helping me to always clarify my doubts and keep Clarion alive
 
 
 
